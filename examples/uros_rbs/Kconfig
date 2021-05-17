@@ -1,0 +1,17 @@
+config UROS_RBS_EXAMPLE
+	bool "micro-ROS RBS Demo"
+	default n
+	depends on UROS
+	---help---
+		micro-ROS RBS demo app
+
+if UROS_RBS_EXAMPLE
+
+config UROS_RBS_EXAMPLE_PROGNAME
+	string "Program name"
+	default "uros_rbs"
+	depends on BUILD_KERNEL
+	---help---
+		Reservation based scheduling demo.
+
+endif
